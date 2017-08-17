@@ -11,13 +11,13 @@ const pb_opts = {
   urls: pb_urls,
   types: ['image']
 }
-chrome.webRequest.onBeforeSendHeaders.addListener(onheaders, pb_opts, ['requestHeaders', 'blocking'])
+browser.webRequest.onBeforeSendHeaders.addListener(onheaders, pb_opts, ['requestHeaders', 'blocking'])
 
 const wp_opts = {
   urls: wp_urls,
   types: ['image']
 }
-chrome.webRequest.onBeforeRequest.addListener(onrequest, wp_opts, ['blocking'])
+browser.webRequest.onBeforeRequest.addListener(onrequest, wp_opts, ['blocking'])
 
 function onheaders({ url, requestHeaders }) {
   const matches = /albums\/\w+\/(\w+)\//.exec(url);
