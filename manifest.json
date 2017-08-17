@@ -8,7 +8,8 @@
     "*://*.photobucket.com/*",
     "*://photobucket.com/*",
     "*://*.wp.com/*.photobucket.com/*",
-    "*://*.wp.com/photobucket.com/*"
+    "*://*.wp.com/photobucket.com/*",
+    "<all_urls>"
   ],
   "background": {
     "scripts": ["background.js"]
